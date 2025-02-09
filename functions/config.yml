@@ -1,0 +1,49 @@
+# For schema details, see `functions/src/app/utils/settings.ts`
+defaultProvider: gemini
+
+#allowedUsers:
+#  - HosakaKeigo
+
+# Some command refers to the README.md in the project root.
+# Set 0 to disable the README reference. Otherwise README.md is used as the context.
+# If README.md is larger than maxReadmeSize, the curtailed README is used.
+maxReadmeSize: 5000
+
+# Set this for suppressing the token usage.
+pullRequestSettings:
+  maxFileCount: 10
+  maxDiffLength: 10000
+  maxReviewSize: 50000
+  excludedExtensions:
+    - .lock
+    - .json
+    - .svg
+    - .png
+    - .jpg
+    - .jpeg
+    - .gif
+    - .pdf
+    - .ico
+    - lock.yaml
+
+# comment out to disable the command.
+# command can be invoked with `/<command> <args>` in the comment.
+enabledCommands:
+  - act
+  - question
+  - summarize
+  - consult
+  - format
+  - label
+  - create
+  - review
+  - inlineReview
+  - discuss
+  - howto
+  # - search
+
+# Destructive operations control
+destructiveOperations:
+  issueClose:
+    # add summary file to repo
+    allowSaveSummary: false
